@@ -1,0 +1,15 @@
+{
+    "name": "antonchaikin/f3-material-icons",
+    "description": "Material Icons plugin for Fat-Free Framework (F3)",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "F3MaterialIcons\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "bcosca/fatfree": "*"
+    }
+}
