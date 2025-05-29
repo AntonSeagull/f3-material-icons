@@ -63,6 +63,10 @@ class MaterialIcons
     public static function getIcon(?string $name): ?string
     {
 
+        if (!$name) {
+            return null;
+        }
+
         $name = trim($name);
 
         $directory = __DIR__ . '/icons';
