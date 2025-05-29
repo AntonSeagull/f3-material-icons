@@ -18,7 +18,7 @@ class MaterialIcons
     public static function register(): void
     {
         $f3 = Base::instance();
-        $f3->set('icon', fn(string $name) => self::getIcon($name));
+        $f3->set('icon', fn(?string $name) => self::getIcon($name));
     }
 
     public static function browser(): void
@@ -50,8 +50,8 @@ class MaterialIcons
         foreach ($icons as $icon) {
             echo '<div class="col-2">
             <div class="card text-center p-2">
-              <div class="card-body p-2" style="height:64px;">' . $icon['svg'] . '</div>
-              <small class="text-muted" style="font-size:10px;">' . htmlspecialchars($icon['name']) . '</small>
+              <div class="card-body p-2" style="height:64px; width:64px;">' . $icon['svg'] . '</div>
+              <small class="text-muted" style="font-size:12px;">' . htmlspecialchars($icon['name']) . '</small>
             </div>
           </div>';
         }
@@ -60,7 +60,7 @@ class MaterialIcons
     }
 
 
-    public static function getIcon(string $name): ?string
+    public static function getIcon(?string $name): ?string
     {
 
         $name = trim($name);
@@ -74,6 +74,6 @@ class MaterialIcons
 }
 
 /**
- * @method string|null icon(string $name)
+ * @method string|null icon(?string $name)
  */
 interface MaterialIconAwareF3 {}
